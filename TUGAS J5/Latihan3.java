@@ -11,7 +11,7 @@ public class Latihan3 {
         int ukuran;
         double harga = 0.0;
 
-        System.out.print("Masukkan merk sepatu (converse/sketcher/nike) ");
+        System.out.print("Masukkan merk sepatu (converse/sketcher/nike) : ");
         merk = input18.nextLine();
 
         System.out.print("Masukkan kategori sepatu : ");

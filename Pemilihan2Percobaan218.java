@@ -7,10 +7,12 @@ public class Pemilihan2Percobaan218 {
 
         int pilihan_menu;
         String member;
+        String metode_pembayaran;
         double harga;
         double diskon = 0.0;
         double total_bayar = 0.0;
-        double pembayaranQris;
+        double potongan_qris = 1000;
+        
 
         System.out.println("------------------------");
         System.out.println("===== MENU KFE JTI =====");
@@ -74,13 +76,18 @@ public class Pemilihan2Percobaan218 {
         } else {
             System.out.println("Member tidak valid");
         }
-         double potonganDiskon = total_bayar * diskon / 100 ;
-         double totalSetelahDiskon = total_bayar - potonganDiskon ;
-
-         if (pembayaranQris.equalsIgnoreCase("y")) {
-            totalSetelahDiskon -= 1000;
-         }
-
+         
+        System.out.print("Metode pembayaran Cash/QRIS (y/n) ?: ");
+        metode_pembayaran = input18.nextLine();
+        if (metode_pembayaran.equalsIgnoreCase("y")){
+            total_bayar -= potongan_qris;
+            System.out.println("Potongan QRIS sebesar Rp. 1.000 telah diterapkan");
+        } else if (metode_pembayaran.equalsIgnoreCase("n")) {
+            System.out.println("Tidak ada potongan QRIS");
+        } else {
+            System.out.println("Input metode pembayaran tidak valid");
+            return;
+        }
         
         System.out.println("------------------------------------------");
         }

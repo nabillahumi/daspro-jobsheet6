@@ -34,6 +34,12 @@ public class Pemilihan2Percobaan318 {
             gajiBersih = (int) (penghasilan - (pajak * penghasilan));
             System.out.println("Penghasil Bersih : " + gajiBersih);
     
+        } else if (kategori.equals("PEBISNIS")) {
+            if (penghasilan == 2000000) {
+                pajak = 0.1;
+            gajiBersih = (int) (penghasilan - (pajak * penghasilan));
+            System.out.println("Penghasil Bersih : " + gajiBersih);
+            }
         } else 
             System.out.println("Masukkan Kategori Salah ");
     }
